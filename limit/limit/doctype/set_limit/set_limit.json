@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2021-07-08 16:19:18.724436",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "usage_section",
+  "no_of_user",
+  "no_of_emails",
+  "max_space",
+  "site_expiry",
+  "support_col",
+  "support_email",
+  "support_phone"
+ ],
+ "fields": [
+  {
+   "description": "Limit on the number of maximum user creation",
+   "fieldname": "no_of_user",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. Of Users",
+   "reqd": 1
+  },
+  {
+   "description": "Limit on the number of emails sent per month from the site. When limit is reached, emails will become muted. They will be blocked up in email queue.",
+   "fieldname": "no_of_emails",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. Of Emails Per Month",
+   "reqd": 1
+  },
+  {
+   "description": "Limit on the maximum space the site can use (GB). For ex. to restrict space usage to 150MB, you should put value as 0.157",
+   "fieldname": "max_space",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Space Limit",
+   "reqd": 1
+  },
+  {
+   "description": "Expiry date for the site",
+   "fieldname": "site_expiry",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Site Expiry Date",
+   "reqd": 1
+  },
+  {
+   "description": " Email id to be displayed when limit is reached.",
+   "fieldname": "support_email",
+   "fieldtype": "Data",
+   "label": "Support Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "description": "Contact no to be displayed when limit is reached.",
+   "fieldname": "support_phone",
+   "fieldtype": "Data",
+   "label": "Support Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "support_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "*When no value is entered or it is zero. It means there is no restriction",
+   "fieldname": "usage_section",
+   "fieldtype": "Heading",
+   "label": "[1] When not using a particular limit restriction, increase its value to a high no. [2]Uninstall the limit app if not using restrictions"
+  }
+ ],
+ "hide_toolbar": 1,
+ "in_create": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-07-09 10:18:34.681626",
+ "modified_by": "Administrator",
+ "module": "Limit",
+ "name": "Set Limit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}
